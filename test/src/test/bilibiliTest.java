@@ -44,7 +44,7 @@ public class bilibiliTest {
 	 PrintStream p = new PrintStream(wt);
 	 System.out.println(1);
 	 System.out.println(a.adriver.getContext());
-	 p.print(a.adriver.getPageSource());
+//	 p.print(a.adriver.getPageSource());
 
 	 a.adriver.findElement(By.xpath("//div[@id='CustomClickArea']/div/a")).click();
 	 System.out.println(1);
