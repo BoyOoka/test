@@ -22,7 +22,6 @@ public class bilibiliTest {
 	WebDriver wd;
 @Test
   public void xpath() throws InterruptedException, IOException {
-	 System.setProperty("webdriver.chrome.driver", "/Users/gaya/Documents/selenium/chromedriver");
 	  a.adriver.findElement(By.id("tv.danmaku.bili:id/tab_title")).click();
 	  WebElement element = a.adriver.findElement(By.id("tv.danmaku.bili:id/image"));
 //	  a.adriver.tap(1, element, 3000);
@@ -51,6 +50,21 @@ public class bilibiliTest {
 	 p.close();
 	  
   }
+	@SuppressWarnings("deprecation")
+	@Test
+	public void swipTest() throws InterruptedException{
+		a.adriver.findElement(By.id("tv.danmaku.bili:id/tab_title")).click();
+		Thread.sleep(2000);
+		int width = a.adriver.manage().window().getSize().width;
+		int height = a.adriver.manage().window().getSize().height;
+		System.out.println(width);
+		System.out.println(height);
+		for(int i=0;i<5;i++){
+			Thread.sleep(500);
+			a.adriver.swipe(width-10, height/2, 10, height/2, 2000);
+		}
+		System.out.println("finish");
+	}
   @BeforeClass
   public void beforeClass() throws MalformedURLException {
 	  
