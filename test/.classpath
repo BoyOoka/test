@@ -38,6 +38,5 @@
 	<classpathentry kind="lib" path="/Users/gaya/Documents/selenium/lib/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="/Users/gaya/Documents/appium/json.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry kind="var" path="appium"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
