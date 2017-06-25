@@ -71,11 +71,11 @@ public class bilibiliTest {
   @BeforeClass
   public void beforeClass() throws MalformedURLException {
 	  
-//	  a.AnDriver("4.4", "192.168.56.101:5555", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-//	  a.AnDriver("7.0", "192.168.56.101:5555", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-//	  a.AnDriver("4.1", "192.168.56.102:5555", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-	  a.AnDriver("5.0", "8cba2bb", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-//	  a.AnDriver("7.1", "3487e851", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("4.4", "192.168.56.101:5555", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("7.0", "192.168.56.101:5555", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("4.1", "192.168.56.102:5555", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+	  a.AnDriver("5.0", "8cba2bb", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("7.1", "3487e851", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
   }
 
   @AfterClass
