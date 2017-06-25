@@ -27,27 +27,30 @@ public class bilibiliTest {
 //	  a.adriver.tap(1, element, 3000);
 	  element.click();
 	  Thread.sleep(6000);
-	  Set<String> contextSet = a.adriver.getContextHandles();
+	  a.adriver.context("WEBVIEW_tv.danmaku.bili:web");
+/*	  Set<String> contextSet = a.adriver.getContextHandles();
 	  for(String context : contextSet ){
 		  System.out.println(context);
 		  if(context.contains("WEBVIEW_tv")){
-//			  a.adriver.context("WEBVIEW_tv.danmaku.bili:web");
-			  a.adriver.context(context);
+			  a.adriver.context("WEBVIEW_tv.danmaku.bili:web");
+//			  a.adriver.context(context);
 			  System.out.println("1");
 			  break;
 		  }
 	  }
-	  a.adriver.context("WEBVIEW_tv.danmaku.bili:web");
+	  */
+	  System.out.println(a.adriver.getRemoteAddress());
+
 //	  a.adriver.findElement(By.className("android.widget.ImageButton")).click();
-	 FileOutputStream wt = new FileOutputStream("/Users/gaya/Downloads/2.html") ;
-	 PrintStream p = new PrintStream(wt);
+//	 FileOutputStream wt = new FileOutputStream("/Users/gaya/Downloads/2.html") ;
+//	 PrintStream p = new PrintStream(wt);
 	 System.out.println(1);
 	 System.out.println(a.adriver.getContext());
 //	 p.print(a.adriver.getPageSource());
 
 	 a.adriver.findElement(By.xpath("//div[@id='CustomClickArea']/div/a")).click();
 	 System.out.println(1);
-	 p.close();
+//	 p.close();
 	  
   }
 	@SuppressWarnings("deprecation")
@@ -69,9 +72,10 @@ public class bilibiliTest {
   public void beforeClass() throws MalformedURLException {
 	  
 //	  a.AnDriver("4.4", "192.168.56.101:5555", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-	  a.AnDriver("7.0", "192.168.56.101:5555", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("7.0", "192.168.56.101:5555", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
 //	  a.AnDriver("4.1", "192.168.56.102:5555", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-
+	  a.AnDriver("5.0", "8cba2bb", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("7.1", "3487e851", "/Users/gaya/Documents/App/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
   }
 
   @AfterClass
