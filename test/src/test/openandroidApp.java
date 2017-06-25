@@ -22,7 +22,7 @@ public class openandroidApp {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.0.2");
-		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/AndroidApp/weibo.apk");
+		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/App/weibo.apk");
 //		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "8cba2bb");
 //		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "3487e851");

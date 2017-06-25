@@ -64,7 +64,7 @@ public class openIosApp {
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.3");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 5s");
 //		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/sample-code-master/sample-code/apps/TestApp/build/release-iphonesimulator/TestApp.app");
-		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/App/WebViewApp.app");
+		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/App/TestApp.app");
 //		capabilities.setCapability(MobileCapabilityType.APP, "io.appium.TestApp.gaya");
 //		capabilities.setCapability(MobileCapabilityType.UDID, "8dd241eb3c7103b23be2c9e94844b8e5e9754c67");
 		capabilities.setCapability(MobileCapabilityType.NO_RESET, true);

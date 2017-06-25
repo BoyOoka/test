@@ -35,6 +35,7 @@ public class driver {
 //		acapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Selendroid");
 		acapabilities.setCapability(MobileCapabilityType.APP, appPath);
 		acapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+//		acapabilities.setCapability("noSgin", false);
 		acapabilities.setCapability("appPackge",appPackge );
 		acapabilities.setCapability("appActivity", appActivity);
 		adriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), acapabilities);
