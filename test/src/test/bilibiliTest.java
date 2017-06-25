@@ -70,12 +70,14 @@ public class bilibiliTest {
 	}
   @BeforeClass
   public void beforeClass() throws MalformedURLException {
+	  File file = new File("");
+	  String path = file.getAbsolutePath();
 	  
-//	  a.AnDriver("4.4", "192.168.56.101:5555", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-//	  a.AnDriver("7.0", "192.168.56.101:5555", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-//	  a.AnDriver("4.1", "192.168.56.102:5555", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-	  a.AnDriver("5.0", "8cba2bb", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-//	  a.AnDriver("7.1", "3487e851", "/test/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("4.4", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("7.0", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("4.1", "192.168.56.102:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+	  a.AnDriver("5.0", "8cba2bb", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("7.1", "3487e851", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
   }
 
   @AfterClass
