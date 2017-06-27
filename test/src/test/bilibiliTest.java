@@ -1,5 +1,5 @@
 package test;
-
+import test.driver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
@@ -72,7 +72,6 @@ public class bilibiliTest {
   public void beforeClass() throws MalformedURLException {
 	  File file = new File("");
 	  String path = file.getAbsolutePath();
-	  
 //	  a.AnDriver("4.4", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
 	  a.AnDriver("7.0", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
 //	  a.AnDriver("4.1", "192.168.56.102:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");

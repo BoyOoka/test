@@ -1,11 +1,17 @@
 package test;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -53,5 +59,23 @@ public class driver {
 	desiredCapabilities.setCapability("appActivity", appActivity);
 	URL url = new URL("http://127.0.0.1:4723/wd/hub");
 	remoteWebDriver = new RemoteWebDriver(url, desiredCapabilities);
+	}
+	void Screenshot(AndroidDriver driver,String ScreeName) throws IOException{
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd-HH-mm-ss");
+		String dateString = formatter.format(new Date());
+		String dir_name = System.getProperty("user.dir")+"/异常图片";
+		System.out.println("异常图片目录"+dir_name);
+		if(!(new File(dir_name).exists())){
+			new File(dir_name).mkdir();
+		}
+		File Screen = driver.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(Screen, new File(dir_name+"/"+dateString+ScreeName+".jpg"));
+	}
+}
+class test{
+	int add(){
+		int G,H=0,I=0;
+		G = H + I;
+		return G;
 	}
 }
