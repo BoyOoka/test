@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.bilibiliTest">
+      <class name="test.Oil">
         <methods>
+          <include name="login"/>
+          <include name="singleOilBuy"/>
           <include name="afterClass"/>
+          <include name="start"/>
           <include name="beforeClass"/>
-          <include name="xpath"/>
         </methods>
-      </class> <!-- test.bilibiliTest -->
+      </class> <!-- test.Oil -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

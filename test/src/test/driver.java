@@ -39,13 +39,15 @@ public class driver {
 		acapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		acapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device_name);
 //		acapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Selendroid");
+		
+//		acapabilities.setCapability(MobileCapabilityType.AUTO_WEBVIEW, true);
+		acapabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "");
 		acapabilities.setCapability(MobileCapabilityType.APP, appPath);
 		acapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 //		acapabilities.setCapability("noSgin", false);
 		acapabilities.setCapability("appPackge",appPackge );
 		acapabilities.setCapability("appActivity", appActivity);
 		adriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), acapabilities);
-//		adriver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), acapabilities);
 	
 	}
 	void remoteDriver(String platform_version,String device_name,String appPath,String appPackge,String appActivity) throws MalformedURLException{

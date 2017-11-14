@@ -15,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
@@ -61,16 +62,20 @@ public class openIosApp {
 	static public void beforeTest() throws MalformedURLException{
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.3");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.1");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 5s");
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 //		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/sample-code-master/sample-code/apps/TestApp/build/release-iphonesimulator/TestApp.app");
-		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/App/TestApp.app");
-//		capabilities.setCapability(MobileCapabilityType.APP, "io.appium.TestApp.gaya");
-//		capabilities.setCapability(MobileCapabilityType.UDID, "8dd241eb3c7103b23be2c9e94844b8e5e9754c67");
+//		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/App/TestApp.app");
+		capabilities.setCapability("bundleId", "io.appium.TestApp.gaya");
+		capabilities.setCapability(MobileCapabilityType.UDID, "8dd241eb3c7103b23be2c9e94844b8e5e9754c67");
 		capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
-//		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5000);
+		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5000);
 		driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 		
+//		(new TouchAction(driver)).tap(462, 322).perform();
+//		(new TouchAction(driver)).tap(314, 198).perform();
+
 	}
 	@AfterClass
 	static	public void afterTest(){
