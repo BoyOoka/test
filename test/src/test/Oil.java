@@ -3,10 +3,15 @@ package test;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -14,7 +19,6 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-
 public class Oil {
 	AppiumDriver<WebElement> driver;
  @SuppressWarnings("deprecation")
@@ -35,10 +39,26 @@ public class Oil {
  }
   @Test(priority=2)
   public void login() {
-	  driver.findElement(By.id("")).sendKeys("");
+	  driver.findElement(By.id("com.boyuda.youguanjia:id/editText_login_userId")).clear();
+	  driver.findElement(By.id("com.boyuda.youguanjia:id/editText_login_userId")).sendKeys("川R100003");
+	  driver.findElement(By.id("com.boyuda.youguanjia:id/editText_login_userPwd")).clear();
+	  driver.findElement(By.id("com.boyuda.youguanjia:id/editText_login_userPwd")).sendKeys("123456");
+	  driver.findElement(By.id("com.boyuda.youguanjia:id/login_btn")).click();
   }
   @Test(priority=3)
   public void singleOilBuy() {
+	  WebElement showClose = new AndroidDriverWait(driver, 60)
+              .until(new ExpectedCondition<WebElement>() {
+                  public WebElement apply(AndroidDriver d) {
+                      return d.findElement(By
+                              .id("com.boyuda.youguanjia:id/home_notify_close"));
+                  }
+
+              });
+	  driver.findElement(By.id("com.boyuda.youguanjia:id/home_notify_close")).click();
+	  driver.findElement(By.id("com.boyuda.youguanjia:id/home_place_btn")).click();
+	  driver.findElement(By.xpath("//android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.RelativeLayout/android.widget.ImageView")).click();
+	  
 	  
   }
   @BeforeClass
@@ -50,7 +70,9 @@ public class Oil {
 	  capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.0");
 //	  capabilities.setCapability(MobileCapabilityType.AUTO_WEBVIEW, true);
 	  capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-	  capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
+	  capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+	  capabilities.setCapability("unicodeKeyboard", "true");
+	  capabilities.setCapability("resetKeyboard", "true");
 	  
 	  capabilities.setCapability("appPackge", "com.boyuda.youguanjia");
 	  capabilities.setCapability("appActivity", "com.boyuda.youguanjia.activity.MainActivity");
@@ -62,12 +84,13 @@ public class Oil {
 
 		e.printStackTrace();
 	}
+	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @AfterClass
   public void afterClass() {
-	  driver.closeApp();
-	  driver.close();
+//	  driver.closeApp();
+//	  driver.close();
   }
 
 }
