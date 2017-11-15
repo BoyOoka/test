@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33931" started-at="2017-06-27T14:13:02Z" finished-at="2017-06-27T14:13:36Z">
+  <suite name="Suite" duration-ms="72956" started-at="2017-11-15T14:54:50Z" finished-at="2017-11-15T14:56:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33931" started-at="2017-06-27T14:13:02Z" finished-at="2017-06-27T14:13:36Z">
-      <class name="test.bilibiliTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.bilibiliTest@5c3bd550]" name="beforeClass" is-config="true" duration-ms="20391" started-at="2017-06-27T22:13:02Z" finished-at="2017-06-27T22:13:22Z">
+    <test name="Test" duration-ms="72956" started-at="2017-11-15T14:54:50Z" finished-at="2017-11-15T14:56:03Z">
+      <class name="test.Oil">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.Oil@458c1321]" name="beforeClass" is-config="true" duration-ms="21703" started-at="2017-11-15T22:54:50Z" finished-at="2017-11-15T22:55:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="swipTest()[pri:0, instance:test.bilibiliTest@5c3bd550]" name="swipTest" duration-ms="10929" started-at="2017-06-27T22:13:22Z" finished-at="2017-06-27T22:13:33Z">
+        <test-method status="PASS" signature="start()[pri:1, instance:test.Oil@458c1321]" name="start" duration-ms="5081" started-at="2017-11-15T22:55:12Z" finished-at="2017-11-15T22:55:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- swipTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.bilibiliTest@5c3bd550]" name="afterClass" is-config="true" duration-ms="2582" started-at="2017-06-27T22:13:33Z" finished-at="2017-06-27T22:13:36Z">
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="login()[pri:2, instance:test.Oil@458c1321]" name="login" duration-ms="15705" started-at="2017-11-15T22:55:17Z" finished-at="2017-11-15T22:55:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="singleOilBuy()[pri:3, instance:test.Oil@458c1321]" name="singleOilBuy" duration-ms="29274" started-at="2017-11-15T22:55:32Z" finished-at="2017-11-15T22:56:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- singleOilBuy -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.Oil@458c1321]" name="afterClass" is-config="true" duration-ms="1108" started-at="2017-11-15T22:56:02Z" finished-at="2017-11-15T22:56:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.bilibiliTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- test.Oil -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

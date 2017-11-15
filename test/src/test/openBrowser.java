@@ -11,16 +11,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class openBrowser {
 	static WebDriver driver;
 	@Test
-	public void test() {
+	public void test() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver","/Users/gaya/Documents/selenium/chromedriver");
 		driver = new ChromeDriver();
-		driver.get("http://www.baidu.com");
-		driver.findElement(By.id("kw")).sendKeys("Hello Mac");
+		driver.get("chrome://settings/");
+//		driver.findElement(By.id("start-stop-sync")).click();
+//		driver.findElement(By.xpath("//*[@id='help']/button")).click();
+//		driver.switchTo().frame(0);
+//		driver.findElement(By.xpath("//*[@id='help']/button")).click();
+		driver.switchTo().frame("settings");
+		driver.findElement(By.id("start-stop-sync")).click();
+//		System.out.println(driver.getWindowHandles());
 	}
 
 	@AfterClass
 	public static void clos(){
-		driver.close();
-		driver.quit();
+//		driver.close();
+//		driver.quit();
 	}
 }

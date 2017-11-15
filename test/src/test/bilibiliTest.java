@@ -24,7 +24,7 @@ public class bilibiliTest {
 	driver a = new driver();
 	WebDriver wd;
 	
-@Test
+@Test(priority=1)
   public void xpath() throws InterruptedException, IOException {
 	  a.adriver.findElement(By.id("tv.danmaku.bili:id/tab_title")).click();
 	  WebElement element = a.adriver.findElement(By.id("tv.danmaku.bili:id/image"));
@@ -43,7 +43,7 @@ public class bilibiliTest {
 		  }
 	  }
 	  */
-	  System.out.println(a.adriver.getRemoteAddress());
+	  System.out.println(a.adriver.getCurrentUrl());
 
 //	  a.adriver.findElement(By.className("android.widget.ImageButton")).click();
 	 FileOutputStream wt = new FileOutputStream("/Users/gaya/Downloads/2.html") ;
@@ -58,7 +58,7 @@ public class bilibiliTest {
 	  
   }
 	@SuppressWarnings("deprecation")
-	@Test
+	@Test(priority=2)
 	public void swipTest() throws InterruptedException{
 		a.adriver.findElement(By.id("tv.danmaku.bili:id/tab_title")).click();
 		Thread.sleep(2000);
@@ -76,12 +76,12 @@ public class bilibiliTest {
   public void beforeClass() throws IOException {
 	  File file = new File("");
 	  String path = file.getAbsolutePath();
-//	  a.AnDriver("4.4", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-	  a.AnDriver("7.0", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+	  a.AnDriver("4.4", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("7.0", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
 //	  a.AnDriver("4.1", "192.168.56.102:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-//	  a.AnDriver("5.0", "8cba2bb", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-//	  a.AnDriver("7.1", "3487e851", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
-	  a.Screenshot(a.adriver, "截个图");
+//	  a.AnDriver("5.0", "192.168.56.101:5555", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.AnDriver("7.1.1", "3487e851", path+"/app/bili.apk", "tv.danmaku.bili", "tv.danmaku.bili.MainActivity");
+//	  a.Screenshot(a.adriver, "截个图");
   }
 
   @AfterClass

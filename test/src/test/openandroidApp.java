@@ -21,11 +21,11 @@ public class openandroidApp {
 	public void test() throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.0.2");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.1");
 		capabilities.setCapability(MobileCapabilityType.APP, "/Users/gaya/Documents/App/weibo.apk");
 //		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "8cba2bb");
-//		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "3487e851");
+//		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "8cba2bb");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "3487e851");
 		capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 	//	capabilities.setCapability(MobileCapabilityType., true);
 		capabilities.setCapability("appPakage", "com.sina.weibo");
