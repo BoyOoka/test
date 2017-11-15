@@ -5,10 +5,8 @@
     <classes>
       <class name="test.Oil">
         <methods>
-          <include name="login"/>
           <include name="singleOilBuy"/>
           <include name="afterClass"/>
-          <include name="start"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- test.Oil -->
