@@ -2,44 +2,46 @@
 <testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="202281" started-at="2017-11-20T13:30:53Z" finished-at="2017-11-20T13:34:15Z">
+  <suite name="Suite" duration-ms="128055" started-at="2017-11-20T13:52:47Z" finished-at="2017-11-20T13:54:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="202281" started-at="2017-11-20T13:30:53Z" finished-at="2017-11-20T13:34:15Z">
+    <test name="Test" duration-ms="128055" started-at="2017-11-20T13:52:47Z" finished-at="2017-11-20T13:54:55Z">
       <class name="test.Oil">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.Oil@55d56113]" name="beforeClass" is-config="true" duration-ms="135407" started-at="2017-11-20T21:30:53Z" finished-at="2017-11-20T21:33:09Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.Oil@458c1321]" name="beforeClass" is-config="true" duration-ms="14781" started-at="2017-11-20T21:52:47Z" finished-at="2017-11-20T21:53:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="start()[pri:1, instance:test.Oil@55d56113]" name="start" duration-ms="5283" started-at="2017-11-20T21:33:09Z" finished-at="2017-11-20T21:33:14Z">
+        <test-method status="PASS" signature="start()[pri:1, instance:test.Oil@458c1321]" name="start" duration-ms="4682" started-at="2017-11-20T21:53:02Z" finished-at="2017-11-20T21:53:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="login()[pri:2, instance:test.Oil@55d56113]" name="login" duration-ms="15854" started-at="2017-11-20T21:33:14Z" finished-at="2017-11-20T21:33:30Z">
+        <test-method status="PASS" signature="login()[pri:2, instance:test.Oil@458c1321]" name="login" duration-ms="16651" started-at="2017-11-20T21:53:07Z" finished-at="2017-11-20T21:53:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="FAIL" signature="singleOilBuy()[pri:3, instance:test.Oil@55d56113]" name="singleOilBuy" duration-ms="44598" started-at="2017-11-20T21:33:30Z" finished-at="2017-11-20T21:34:15Z">
+        <test-method status="FAIL" signature="singleOilBuy()[pri:3, instance:test.Oil@458c1321]" name="singleOilBuy" duration-ms="90928" started-at="2017-11-20T21:53:24Z" finished-at="2017-11-20T21:54:55Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 28.77 seconds
+Command duration or timeout: 84.11 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
 System info: host: 'gayatekiMacBook-Air.local', ip: 'fe80:0:0:0:1cf7:df5c:3fcf:c060%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_131'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{appPackage=com.boyuda.youguanjia, noReset=true, appPackge=com.boyuda.youguanjia, deviceName=192.168.56.101:5555, platform=LINUX, deviceUDID=192.168.56.101:5555, desired={app=/Users/gaya/Documents/App/oil.apk, appActivity=com.boyuda.youguanjia.activity.MainActivity, noReset=true, platformVersion=7.0, automationName=Appium, unicodeKeyboard=true, platformName=Android, appPackge=com.boyuda.youguanjia, deviceName=192.168.56.101:5555, resetKeyboard=true}, platformVersion=7.0, webStorageEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Genymotion, resetKeyboard=true, app=/Users/gaya/Documents/App/oil.apk, deviceScreenSize=768x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.boyuda.youguanjia, appWaitActivity=com.boyuda.youguanjia.activity.MainActivity, databaseEnabled=false, appActivity=com.boyuda.youguanjia.activity.MainActivity, locationContextEnabled=false, deviceModel=Custom Phone - 7.0.0 - API 24 - 768x1280}]
-Session ID: 8c4a8ae1-9426-4a1e-8e06-2a33d52eb945]]>
+Session ID: 52b57fd4-e1f7-4f8d-b285-70a4e5a6369e
+*** Element info: {Using=id, value=com.boyuda.youguanjia:id/homePage_btn}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 28.77 seconds
+Command duration or timeout: 84.11 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
 System info: host: 'gayatekiMacBook-Air.local', ip: 'fe80:0:0:0:1cf7:df5c:3fcf:c060%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_131'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{appPackage=com.boyuda.youguanjia, noReset=true, appPackge=com.boyuda.youguanjia, deviceName=192.168.56.101:5555, platform=LINUX, deviceUDID=192.168.56.101:5555, desired={app=/Users/gaya/Documents/App/oil.apk, appActivity=com.boyuda.youguanjia.activity.MainActivity, noReset=true, platformVersion=7.0, automationName=Appium, unicodeKeyboard=true, platformName=Android, appPackge=com.boyuda.youguanjia, deviceName=192.168.56.101:5555, resetKeyboard=true}, platformVersion=7.0, webStorageEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Genymotion, resetKeyboard=true, app=/Users/gaya/Documents/App/oil.apk, deviceScreenSize=768x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.boyuda.youguanjia, appWaitActivity=com.boyuda.youguanjia.activity.MainActivity, databaseEnabled=false, appActivity=com.boyuda.youguanjia.activity.MainActivity, locationContextEnabled=false, deviceModel=Custom Phone - 7.0.0 - API 24 - 768x1280}]
-Session ID: 8c4a8ae1-9426-4a1e-8e06-2a33d52eb945
+Session ID: 52b57fd4-e1f7-4f8d-b285-70a4e5a6369e
+*** Element info: {Using=id, value=com.boyuda.youguanjia:id/homePage_btn}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -50,12 +52,20 @@ Session ID: 8c4a8ae1-9426-4a1e-8e06-2a33d52eb945
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
-	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
-	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at test.Oil.singleOilBuy(Oil.java:72)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at test.Oil.singleOilBuy(Oil.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -87,11 +97,11 @@ Session ID: 8c4a8ae1-9426-4a1e-8e06-2a33d52eb945
           <reporter-output>
           </reporter-output>
         </test-method> <!-- singleOilBuy -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.Oil@55d56113]" name="afterClass" is-config="true" duration-ms="623" started-at="2017-11-20T21:34:15Z" finished-at="2017-11-20T21:34:15Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.Oil@458c1321]" name="afterClass" is-config="true" duration-ms="886" started-at="2017-11-20T21:54:55Z" finished-at="2017-11-20T21:54:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- test.Oil -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
