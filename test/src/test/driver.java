@@ -63,8 +63,8 @@ public class driver {
 	public void Screenshot(AndroidDriver<WebElement> driver,String ScreeName) throws IOException{
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd-HH-mm-ss");
 		String dateString = formatter.format(new Date());
-		String dir_name = System.getProperty("user.dir")+"/异常图片";
-		System.out.println("异常图片目录"+dir_name);
+		String dir_name = System.getProperty("user.dir")+"/�쳣ͼƬ";
+		System.out.println("���˸�ͼ"+dir_name);
 		if(!(new File(dir_name).exists())){
 			new File(dir_name).mkdir();
 		}
