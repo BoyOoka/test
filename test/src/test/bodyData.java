@@ -1,5 +1,6 @@
 package test;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 
 public class bodyData {
 	//基础代谢
@@ -200,6 +201,54 @@ public class bodyData {
 		}
 		return weightLevelState;
 	}
+	//内脏脂肪指数
+	double visceralFatPercentage_value(double fatPercentage_value){
+		double visceralFatPercentage_value = 0;
+		visceralFatPercentage_value = Math.round(150*fatPercentage_value*fatPercentage_value);
+		return visceralFatPercentage_value;
+	}
+	//内脏脂肪状态
+	String visceralFatPercentage_status_text(double VisceralFatPercentage_value) {
+		String VisceralFatPercentage_status_text = null;
+			if(VisceralFatPercentage_value>0&&VisceralFatPercentage_value<10) {
+	            VisceralFatPercentage_status_text="正常";
+	       }else if(VisceralFatPercentage_value>=10&&VisceralFatPercentage_value<14){
+	           VisceralFatPercentage_status_text="超标";
+	       }else if(VisceralFatPercentage_value>=14){           
+	           VisceralFatPercentage_status_text="高";
+	       }
+		return VisceralFatPercentage_status_text;
+	}
+	//蛋白质
+	double proteinWeight_value(double weight_value,double fatWeight_value,char gender ){
+		double proteinWeight_value =0;
+		if(gender=='m') {
+			proteinWeight_value = 0.2*(weight_value-fatWeight_value);
+		}else {
+			proteinWeight_value = 0.178*(weight_value-fatWeight_value);
+		}
+		return proteinWeight_value;
+	}
+	//蛋白质上界
+	double proteinWeight_upper_limit(double weight_value) {
+		double proteinWeight_upper_limit = 0.1705*weight_value;
+		return proteinWeight_upper_limit;
+	}
+	//蛋白质下界
+	double proteinWeight_lower_limit(double weight_value){
+		double proteinWeight_lower_limit = 0.1395*weight_value;
+		return proteinWeight_lower_limit;
+	}
+	//蛋白质状态
+	String proteinWeight_status_text(double proteinWeight_value,double proteinWeight_lower_limit) {
+		String proteinWeight_status_text = null;
+		if(proteinWeight_value>=proteinWeight_lower_limit){
+			proteinWeight_status_text = "正常";
+		 }else {
+			 proteinWeight_status_text = "低";
+		 }
+		return proteinWeight_status_text;
+	}
 	public static void main(String[] args) {
 		bodyData b = new bodyData();
 		double weight_value = 51,height = 1.6;
@@ -216,5 +265,12 @@ public class bodyData {
 		System.out.println("脂肪:"+b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)));
 		System.out.println("脂肪等级:"+b.fatWeight_status_text(b.fatPercentage_status_text(b.fatPercentage_value(age, weight_value, height, gender), gender)));
 		System.out.println("肥胖等级:"+b.weightLevelState(b.fatPercentage_value(age, weight_value, height, gender), gender));
+		System.out.println("内脏脂肪指数:"+ b.visceralFatPercentage_value(b.fatPercentage_value(age, weight_value, height, gender)));
+		System.out.println("内脏脂肪状态:"+b.visceralFatPercentage_status_text(b.visceralFatPercentage_value(b.fatPercentage_value(age, weight_value, height, gender))));
+		System.out.println("蛋白质:"+b.proteinWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender));
+		System.out.println("蛋白质上界:"+b.proteinWeight_upper_limit(weight_value));
+		System.out.println("蛋白质下界:"+b.proteinWeight_lower_limit(weight_value));
+		System.out.println("蛋白质状态："+b.proteinWeight_status_text(b.proteinWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender), b.proteinWeight_lower_limit(weight_value)));
+		
 	}
 }
