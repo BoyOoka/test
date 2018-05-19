@@ -249,6 +249,151 @@ public class bodyData {
 		 }
 		return proteinWeight_status_text;
 	}
+	//水分
+	double waterWeight_value(double weight_value,double fatWeight_value,char gender) {
+		double waterWeight_value = 0;
+		if(gender=='m') {
+			waterWeight_value = 0.735*(weight_value-fatWeight_value);
+			}else {
+				waterWeight_value = 0.76*(weight_value-fatWeight_value);	
+			}
+		return waterWeight_value;
+		}
+	//水分上界
+	double waterWeight_upper_limit(double weight_value) {
+		double waterWeight_upper_limit;
+		waterWeight_upper_limit = 0.66*weight_value;
+		return waterWeight_upper_limit;
+	}
+	//水分下界
+	double waterWeight_lower_limit(double weight_value) {
+		double waterWeight_lower_limit = 0.54*weight_value;
+		return waterWeight_lower_limit;
+	}
+	//水分状态
+	String waterWeight_status_text(double waterWeight_value,double waterWeight_upper_limit,double waterWeight_lower_limit) {
+		String waterWeight_status_text = null;
+		if(waterWeight_value>=waterWeight_upper_limit) {
+			waterWeight_status_text = "高";
+		}else if(waterWeight_value<waterWeight_lower_limit) {
+			waterWeight_status_text = "低";
+		}else {
+			waterWeight_status_text = "正常";
+		}
+		return waterWeight_status_text;
+	}
+	//肌肉
+	double muscleWeight_value(double weight_value,double fatWeight_value,char gender) {
+		double muscleWeight_value = 0;
+		if(gender=='m') {
+			muscleWeight_value = 0.935*(weight_value-fatWeight_value);
+		}else {
+			muscleWeight_value = 0.938*(weight_value-fatWeight_value);
+		}
+		return muscleWeight_value;
+	}
+	//肌肉上界
+	double muscleWeight_upper_limit(double height,char gender) {
+		double muscleWeight_upper_limit = 0;
+		if(gender=='m') {
+			muscleWeight_upper_limit = height*height*(7.7*height+5.84);
+		}else {
+			muscleWeight_upper_limit = height*height*(7.6*height+4.3);
+		}
+		return muscleWeight_upper_limit;
+	}
+	//肌肉下界
+	double muscleWeight_lower_limit(double height,char gender) {
+		double muscleWeight_lower_limit = 0;
+		if(gender =='m') {
+			muscleWeight_lower_limit = height*height*(6.34*height+4.7);
+		}else {
+			muscleWeight_lower_limit = height*height*(6.2*height+3.55);
+		}
+		return muscleWeight_lower_limit;
+	}
+	//肌肉状态
+	String muscleWeight_status_text(double muscleWeight_value,double muscleWeight_lower_limit) {
+		String muscleWeight_status_text = null;
+		if(muscleWeight_value>=muscleWeight_lower_limit) {
+			muscleWeight_status_text = "正常";
+		}else {
+			muscleWeight_status_text = "低";
+		}
+		return muscleWeight_status_text;
+	}
+	//骨骼肌
+	double boneMuscleWeight_value(double weight_value,double fatWeight_value,char gender) {
+		double boneMuscleWeight_value;
+		if(gender=='m') {
+			boneMuscleWeight_value = 0.667*(weight_value-fatWeight_value);
+		}else {
+			boneMuscleWeight_value = 0.675*(weight_value-fatWeight_value);
+		}
+		return boneMuscleWeight_value;
+	}
+	//骨骼肌上界
+	double boneMuscleWeight_upper_limit(double height,char gender) {
+		double boneMuscleWeight_upper_limit = 0;
+		if(gender=='m') {
+			boneMuscleWeight_upper_limit = 0.75*height*height*(7.7*height+5.84);
+		}else {
+			boneMuscleWeight_upper_limit = 0.75*height*height*(7.6*height+4.3);
+		}
+		return boneMuscleWeight_upper_limit;
+	}
+	//骨骼肌下界
+	double boneMuscleWeight_lower_limit(double height,char gender) {
+		double boneMuscleWeight_lower_limit =0;
+		if(gender=='m') {
+			boneMuscleWeight_lower_limit = 0.75*height*height*(6.34*height+4.7);
+		}else {
+			boneMuscleWeight_lower_limit = 0.75*height*height*(6.2*height+3.55);
+		}
+		return boneMuscleWeight_lower_limit;
+	}
+	//骨骼肌状态
+	String boneMuscleWeight_status_text(double boneMuscleWeight_value,double boneMuscleWeight_lower_limit) {
+		String boneMuscleWeight_status_text = null;
+		if(boneMuscleWeight_value>=boneMuscleWeight_lower_limit) {
+			boneMuscleWeight_status_text = "正常";
+		}else {
+			boneMuscleWeight_status_text = "低";
+		}
+		return boneMuscleWeight_status_text;
+	}
+	//骨质
+	double boneWeight_value(double weight_value,double fatWeight_value,char gender) {
+		double boneWeight_value = 0;
+		if(gender=='m') {
+			boneWeight_value = 0.065*(weight_value-fatWeight_value);
+		}else {
+			boneWeight_value = 0.062*(weight_value-fatWeight_value);
+		}
+		return boneWeight_value;
+	}
+	//骨质上界
+	double boneWeight_upper_limit(double weight_value) {
+		double boneWeight_upper_limit = 0.055*weight_value;
+		return boneWeight_upper_limit;
+	}
+	//骨质下界
+	double boneWeight_lower_limit(double weight_value) {
+		double boneWeight_lower_limit = 0.045*weight_value;
+		return boneWeight_lower_limit;
+	}
+	//骨质状态
+	String boneWeight_status_text(double boneWeight_value,double boneWeight_upper_limit,double boneWeight_lower_limit) {
+		String boneWeight_status_text = null;
+		if(boneWeight_value>=boneWeight_upper_limit) {
+			boneWeight_status_text = "高";
+		}else if(boneWeight_value<boneWeight_lower_limit) {
+			boneWeight_status_text = "低";
+		}else {
+			boneWeight_status_text = "正常";
+		}
+		return boneWeight_status_text;
+	}
 	public static void main(String[] args) {
 		bodyData b = new bodyData();
 		double weight_value = 51,height = 1.6;
@@ -271,6 +416,21 @@ public class bodyData {
 		System.out.println("蛋白质上界:"+b.proteinWeight_upper_limit(weight_value));
 		System.out.println("蛋白质下界:"+b.proteinWeight_lower_limit(weight_value));
 		System.out.println("蛋白质状态："+b.proteinWeight_status_text(b.proteinWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender), b.proteinWeight_lower_limit(weight_value)));
-		
+		System.out.println("水分:"+b.waterWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender));
+		System.out.println("水分上界:"+b.waterWeight_upper_limit(weight_value));
+		System.out.println("水分下界:"+b.waterWeight_lower_limit(weight_value));
+		System.out.println("水分状态:"+b.waterWeight_status_text(b.waterWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender), b.waterWeight_upper_limit(weight_value), b.waterWeight_lower_limit(weight_value)));
+		System.out.println("肌肉:"+b.muscleWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender));
+		System.out.println("肌肉上界:"+b.muscleWeight_upper_limit(height, gender));
+		System.out.println("肌肉下界:"+b.muscleWeight_lower_limit(height, gender));
+		System.out.println("肌肉状态:"+b.muscleWeight_status_text(b.muscleWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender), b.muscleWeight_lower_limit(height, gender)));
+		System.out.println("骨骼肌:"+b.boneMuscleWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender));
+		System.out.println("骨骼肌上界:"+b.boneMuscleWeight_upper_limit(height, gender));
+		System.out.println("骨骼肌下界:"+b.boneMuscleWeight_lower_limit(height, gender));
+		System.out.println("骨骼肌状态:"+b.muscleWeight_status_text(b.muscleWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender), b.muscleWeight_lower_limit(height, gender)));
+		System.out.println("骨质:"+b.boneWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender));
+		System.out.println("骨质上界:"+b.boneWeight_upper_limit(weight_value));
+		System.out.println("骨质下界:"+b.boneWeight_lower_limit(weight_value));
+		System.out.println("骨质状态:"+b.boneWeight_status_text(b.boneWeight_value(weight_value, b.fatWeight_value(weight_value, b.fatPercentage_value(age, weight_value, height, gender)), gender), b.boneWeight_upper_limit(weight_value), b.boneWeight_lower_limit(weight_value)));
 	}
 }
